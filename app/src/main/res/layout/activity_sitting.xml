@@ -1,0 +1,148 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".SittingActivity">
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline_horz"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent="0.30"
+        />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline_ver"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="0.57"
+        />
+
+    <View
+        android:id="@+id/sitting_view"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintBottom_toTopOf="@id/guideline_horz"
+        android:background="@drawable/main_view_background"
+        />
+
+    <ImageView
+        android:id="@+id/sitting_account_img"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toBottomOf="@id/guideline_horz"
+        app:layout_constraintLeft_toRightOf="@id/guideline_ver"
+        android:background="@drawable/sitting_img_background"
+        android:src="@drawable/ic_man"
+        android:padding="15dp"
+        android:scaleType="centerInside"
+        android:layout_marginBottom="30dp"
+        />
+
+    <TextView
+        android:id="@+id/sitting_tv_account_name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintRight_toLeftOf="@id/guideline_ver"
+        app:layout_constraintTop_toTopOf="@id/sitting_account_img"
+        android:layout_marginTop="15dp"
+        android:text="@string/account_name"
+        android:textSize="15sp"
+        android:fontFamily="@font/my_font_bold"
+        android:textColor="@color/my_white"
+        />
+
+    <TextView
+        android:id="@+id/sitting_tv_account_type"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@id/sitting_tv_account_name"
+        app:layout_constraintRight_toLeftOf="@id/guideline_ver"
+        android:layout_marginTop="3dp"
+        android:text="@string/account_type_admin"
+        android:textSize="8dp"
+        android:textColor="@color/my_white"
+        android:fontFamily="@font/app_font_medium"/>
+
+    <Button
+        android:id="@+id/sitting_btn_sign_out"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintBottom_toTopOf="@id/guideline_horz"
+        android:layout_marginLeft="15dp"
+        android:layout_marginBottom="5dp"
+        android:drawableLeft="@drawable/ic_log_out"
+        android:background="@color/shafaf"
+        android:text="@string/log_out"
+        android:textSize="8dp"
+        android:textColor="@color/my_white"
+        android:fontFamily="@font/app_font_medium"
+        android:drawablePadding="5dp"
+        />
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/sitting_recyclerview"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        app:layout_constraintTop_toBottomOf="@id/guideline_horz"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        android:paddingTop="5dp"
+        android:paddingRight="5dp"
+        android:paddingLeft="5dp"
+        android:layoutAnimation="@anim/delay_animation"
+        />
+
+    <ImageButton
+        android:id="@+id/btn_go_home"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        android:src="@drawable/ic_home"
+        android:tint="@color/my_white"
+        android:background="@drawable/btn_go_home_background"
+        android:padding="15dp"
+        android:layout_margin="20dp"
+        tools:ignore="UseAppTint" />
+
+    <CheckBox
+        android:id="@+id/sitting_appsound_checkbox"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toTopOf="@id/sitting_btn_sign_out"
+        app:layout_constraintRight_toRightOf="parent"
+        android:layout_marginRight="5dp"
+        android:layout_marginTop="15dp"
+        app:layout_constraintBottom_toBottomOf="@id/sitting_btn_sign_out"
+        app:layout_constraintBaseline_toBaselineOf="@id/sitting_btn_sign_out"
+        android:buttonTint="@color/my_white"
+        />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="12sp"
+        app:layout_constraintTop_toTopOf="@id/sitting_appsound_checkbox"
+        app:layout_constraintBottom_toBottomOf="@id/sitting_appsound_checkbox"
+        app:layout_constraintRight_toLeftOf="@id/sitting_appsound_checkbox"
+        android:layout_marginRight="2dp"
+        android:layout_marginBottom="3dp"
+        android:text="@string/app_sound"
+        android:textColor="@color/my_white"
+        android:fontFamily="@font/app_font_medium"/>
+
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

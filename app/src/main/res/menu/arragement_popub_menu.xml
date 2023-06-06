@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+<item android:id="@+id/all_sales_menu_most_price" android:title="@string/most_price"
+    android:icon="@drawable/ic_up_dollar"
+    />
+<item android:id="@+id/all_sales_menu_lowest_price" android:title="@string/lowest_price"
+    android:icon="@drawable/ic_down_dollar"/>
+    <item android:id="@+id/all_sales_menu_new" android:title="@string/newest"
+        android:icon="@drawable/ic_calendar"
+        />
+    <item android:id="@+id/all_sales_menu_oldest" android:title="@string/oldest"
+    android:icon="@drawable/ic_calendar"
+    />
+</menu>
